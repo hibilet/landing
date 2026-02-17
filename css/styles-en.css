@@ -1,0 +1,717 @@
+/* English version — Dark theme overrides */
+
+:root {
+  --text: #f8fafc;
+  --text-muted: #cbd5e1;
+  --bg: #1e1e28;
+  --bg-alt: #252532;
+  --bg-card: #2d2d3a;
+  --border: #3d3d4a;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.section-alt {
+  background: var(--bg-alt);
+}
+
+/* Nav — Fixed, pill + blur on scroll */
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+}
+
+body {
+  padding-top: 72px;
+}
+
+.navbar {
+  --bs-navbar-color: rgba(255, 255, 255, 0.85);
+  --bs-navbar-hover-color: var(--secondary-light);
+  --bs-navbar-brand-color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin: 0;
+  border-radius: 0;
+  background: transparent;
+  transition: margin 0.3s, border-radius 0.3s, background 0.3s, backdrop-filter 0.3s, box-shadow 0.3s;
+}
+
+.navbar.scrolled {
+  margin: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  background: rgba(45, 45, 58, 0.85) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand img {
+  filter: brightness(1.15);
+}
+
+.nav-link {
+  color: var(--text-muted) !important;
+}
+
+.nav-link:hover {
+  color: var(--secondary-light) !important;
+}
+
+.navbar .dropdown-menu {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+.navbar .dropdown-item {
+  color: var(--text);
+}
+
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+  background: var(--bg-alt);
+  color: var(--secondary-light);
+}
+
+.navbar .dropdown-item.active {
+  background: rgba(49, 39, 131, 0.3);
+  color: var(--secondary-light);
+}
+
+/* CTA buttons — dark text on yellow for readability */
+.btn-cta-primary,
+.btn-cta-nav {
+  color: #1a1a1a !important;
+}
+
+.btn-cta-primary:hover,
+.btn-cta-nav:hover {
+  color: #1a1a1a !important;
+}
+
+.cta-box .btn-cta-primary {
+  color: #1a1a1a !important;
+}
+
+.cta-box .btn-cta-primary:hover {
+  color: #1a1a1a !important;
+}
+
+/* Hero — Full height, fullscreen image background */
+.hero {
+  position: relative;
+  min-height: calc(100vh - 72px);
+  padding: 4rem 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../assets/hibilet-amsterdam.jpg') center/cover no-repeat;
+  z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(30, 30, 40, 0.88) 0%, rgba(49, 39, 131, 0.35) 100%);
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1,
+.hero-subheadline,
+.hero-desc {
+  color: #fff;
+}
+
+.hero-subheadline {
+  color: var(--secondary-light);
+}
+
+.hero-desc {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.hero-visual {
+  display: none;
+}
+
+/* Value bar dark */
+.value-bar {
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.value-bar::before {
+  background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+  opacity: 0.4;
+}
+
+.value-item-icon {
+  color: var(--secondary-light);
+}
+
+.value-item-sep {
+  color: var(--text-muted);
+}
+
+/* Step cards dark */
+.step-card {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+.step-card:hover {
+  border-color: rgba(49, 39, 131, 0.5);
+}
+
+.step-card p {
+  color: var(--text-muted);
+}
+
+/* Feature cards dark */
+.feature-card {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+.feature-card:hover {
+  border-color: rgba(49, 39, 131, 0.5);
+}
+
+.feature-card p {
+  color: var(--text-muted);
+}
+
+/* Product blocks dark */
+.product-block {
+  border-color: var(--border);
+}
+
+.product-block-image-wrap {
+  background: var(--bg-card);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+}
+
+.product-block-image-wrap img {
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.3));
+}
+
+.product-block-label {
+  color: var(--secondary-light);
+}
+
+.product-block-desc {
+  color: var(--text-muted);
+}
+
+.product-highlight {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+/* Product detail modal dark */
+.product-detail-modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+.product-detail-close {
+  background: rgba(255,255,255,0.08);
+  color: var(--text-muted);
+}
+
+.product-detail-close:hover {
+  background: rgba(255,255,255,0.12);
+  color: var(--text);
+}
+
+.product-detail-image-wrap {
+  background: var(--bg-alt);
+}
+
+.product-detail-title {
+  color: var(--text);
+}
+
+.product-detail-desc {
+  color: var(--text-muted);
+}
+
+/* Sale experience section */
+.sale-experience {
+  padding: 4rem 0;
+}
+
+.sale-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sale-steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.sale-steps li:last-child {
+  border-bottom: none;
+}
+
+.sale-step-num {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.sale-step-content h4 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.sale-step-content p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.widget-embed {
+  width: 100%;
+  min-height: 600px;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  background: transparent;
+}
+
+.widget-embed iframe {
+  width: 100%;
+  height: 720px;
+  min-height: 600px;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .widget-embed iframe {
+    height: 620px;
+    min-height: 520px;
+  }
+}
+
+/* Success story with map */
+.success-map-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.success-map-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Europe_blank_laea_location_map.svg/1200px-Europe_blank_laea_location_map.svg.png') center/cover no-repeat;
+  opacity: 0.12;
+  filter: grayscale(1) brightness(0.5);
+}
+
+.success-map-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+  opacity: 0.95;
+}
+
+.success-map-content {
+  position: relative;
+  z-index: 1;
+}
+
+.success-map-section .success-stats {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.success-map-countries {
+  font-size: 1rem;
+  margin-top: 1rem;
+  opacity: 0.95;
+}
+
+/* Demo dark */
+.demo-showcase {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+.demo-tabs {
+  background: var(--bg-alt);
+  border-color: var(--border);
+}
+
+.demo-tab {
+  color: var(--text-muted);
+}
+
+.demo-tab:hover,
+.demo-tab.active {
+  color: var(--secondary-light);
+}
+
+.demo-tab.active {
+  border-bottom-color: var(--secondary);
+}
+
+.demo-frame {
+  background: var(--bg-alt);
+}
+
+/* Pricing cards - same height */
+.pricing-cards-row {
+  align-items: stretch;
+}
+
+.pricing-cards-row .col-12 {
+  display: flex;
+}
+
+.pricing-cards-row .pricing-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.pricing-cards-row .pricing-card .pricing-perks {
+  flex: 1;
+  min-height: 0;
+}
+
+/* Pricing Calculator */
+.pricing-calculator {
+  background: linear-gradient(135deg, rgba(49, 39, 131, 0.15) 0%, rgba(49, 39, 131, 0.05) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin: 2.5rem 0;
+}
+
+.pricing-calculator-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-calculator-label {
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.pricing-calculator-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pricing-ticket-price-select {
+  font-size: 0.85rem;
+  padding: 0.4rem 0.75rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.pricing-ticket-price-select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.pricing-calculator-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--secondary-light);
+}
+
+.pricing-slider-wrap {
+  margin-bottom: 1.5rem;
+}
+
+.pricing-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  background: var(--border);
+  border-radius: 5px;
+  outline: none;
+}
+
+.pricing-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  background: var(--secondary);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(255, 209, 5, 0.45);
+  transition: transform 0.15s;
+}
+
+.pricing-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.08);
+}
+
+.pricing-slider::-moz-range-thumb {
+  width: 26px;
+  height: 26px;
+  background: var(--secondary);
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 12px rgba(255, 209, 5, 0.45);
+}
+
+.pricing-slider-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.pricing-slider-labels span {
+  flex: 1;
+  text-align: center;
+}
+
+/* Pricing calculator results - outside calculator div */
+.pricing-calculator-results {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.pricing-savings {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-savings-badge {
+  font-size: 1.15rem;
+  color: var(--secondary-light);
+}
+
+.pricing-savings-badge strong {
+  color: var(--secondary);
+}
+
+.pricing-tier-fee {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.pricing-tooltip-wrap {
+  display: inline-flex;
+  cursor: help;
+}
+
+.pricing-tooltip-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.pricing-tooltip-wrap:hover .pricing-tooltip-icon {
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.pricing-savings-detail {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0 0 0.25rem;
+}
+
+.pricing-savings-note {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  opacity: 0.8;
+  max-width: 42ch;
+  margin: 0 auto;
+}
+
+/* Pricing card highlight */
+.pricing-card.pricing-card-active {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 2px rgba(255, 209, 5, 0.3);
+}
+
+.pricing-card.pricing-card-active .price {
+  color: var(--secondary);
+}
+
+/* Pricing cards dark */
+.pricing-card {
+  background: var(--bg-card);
+  border-color: var(--border);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.pricing-card-featured {
+  border-color: var(--primary);
+  position: relative;
+}
+
+.price {
+  color: var(--secondary-light);
+}
+
+.price span,
+.price-desc {
+  color: var(--text-muted);
+}
+
+.pricing-perks {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  font-size: 0.9rem;
+}
+
+.pricing-perks li {
+  padding: 0.35rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+  color: var(--text-muted);
+}
+
+.pricing-perks li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.pricing-perks li.perk-plus {
+  color: var(--secondary-pale);
+}
+
+.pricing-activation {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+/* Reseller banner — same as pricing cards */
+.reseller-banner {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+/* FAQ dark */
+.faq-section-title {
+  color: var(--secondary-light);
+}
+
+.faq-accordion .accordion-item {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+.faq-accordion .accordion-button {
+  background: var(--bg-card);
+  color: var(--text);
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+  background: var(--bg-alt);
+  color: var(--secondary-light);
+}
+
+.faq-accordion .accordion-body {
+  color: var(--text-muted);
+}
+
+/* Contact form dark */
+.contact-form .form-control {
+  background: var(--bg-card);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.contact-form .form-control::placeholder {
+  color: var(--text-muted);
+}
+
+.contact-form .form-control:focus {
+  border-color: var(--primary);
+  background: var(--bg-card);
+}
+
+.contact-form .form-label {
+  color: var(--text);
+}
+
+.btn-outline-primary {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.btn-outline-primary:hover {
+  background: var(--secondary);
+  color: var(--text);
+  border-color: var(--secondary);
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
